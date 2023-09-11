@@ -2,17 +2,18 @@ import { BrewProcess } from '@/utilities/brewTypes';
 import { CardActionArea, CardContent, CardMedia, Grid } from '@mui/material';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
+import { useRouter } from 'next/navigation'
 
 type BrewProcessCardProps = {
   brewProcess: BrewProcess
 }
 
 export default function BrewProcessCard(props: BrewProcessCardProps) {
-
+  const router = useRouter()
   // get image
 
   return (
-    <CardActionArea>
+    <CardActionArea onClick={() => router.push('/brewProcessDetails')}>
       <Card sx={{ height: "350px"}}>
           <CardMedia 
             image={props.brewProcess.category === "tea" ? "/tea.jpg" : "/coffee.jpg"}

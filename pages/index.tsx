@@ -7,7 +7,7 @@ export default function Home() {
   const { brewProcesses, error } = getBrewProcessData();
   return (
     <BasicPage>
-      <Grid container spacing={3} marginTop={2} marginBottom={2}>
+      <Grid container spacing={3}>
         {brewProcesses.map((brewProcess) => 
           <Grid item xs={3}>
             <BrewProcessCard brewProcess={brewProcess}/>

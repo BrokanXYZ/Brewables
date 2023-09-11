@@ -9,7 +9,7 @@ type BasicPageProps = {
 export default function BasicPage(props: BasicPageProps) {
   return (<>
     <NavBar/>
-    <Container>
+    <Container sx={{ marginTop: '40px', marginBottom: '40px'}}>
       {props.children}
     </Container>
   </>)
